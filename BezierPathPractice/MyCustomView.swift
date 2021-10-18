@@ -13,8 +13,8 @@ class MyCustomView: UIView {
         super.draw(rect)
 
         let path = UIBezierPath()
-        path.lineWidth = 2
-        path.lineJoinStyle = .round
+        path.lineWidth = 7
+        path.lineCapStyle = .round
         path.usesEvenOddFillRule = true
 
         path.move(to: CGPoint(x: 100, y: 100))
@@ -22,7 +22,14 @@ class MyCustomView: UIView {
 
         path.addLine(to: CGPoint(x: 200, y: 250))
 
+        UIColor.yellow.set()
+
         path.fill()
+
         path.close()
+        
+        UIColor.black.set()
+        path.stroke()
+
     }
 }
