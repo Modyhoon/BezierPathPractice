@@ -20,7 +20,9 @@ class MyCustomView: UIView {
         path.move(to: CGPoint(x: 100, y: 100))
         path.addLine(to: CGPoint(x: 100, y: 200))
 
+        path.addLine(to: CGPoint(x: 200, y: 250))
+
+        path.fill()
         path.close()
-        path.stroke()
     }
 }
