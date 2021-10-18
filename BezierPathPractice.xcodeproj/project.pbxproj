@@ -13,6 +13,7 @@
 		4AE3F170271D5DCB00182DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE3F16E271D5DCB00182DD1 /* Main.storyboard */; };
 		4AE3F172271D5DCE00182DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE3F171271D5DCE00182DD1 /* Assets.xcassets */; };
 		4AE3F175271D5DCE00182DD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE3F173271D5DCE00182DD1 /* LaunchScreen.storyboard */; };
+		4AE3F17D271D601D00182DD1 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3F17C271D601D00182DD1 /* MyCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4AE3F171271D5DCE00182DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AE3F174271D5DCE00182DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AE3F176271D5DCE00182DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AE3F17C271D601D00182DD1 /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				4AE3F168271D5DCB00182DD1 /* AppDelegate.swift */,
 				4AE3F16A271D5DCB00182DD1 /* SceneDelegate.swift */,
 				4AE3F16C271D5DCB00182DD1 /* ViewController.swift */,
+				4AE3F17C271D601D00182DD1 /* MyCustomView.swift */,
 				4AE3F16E271D5DCB00182DD1 /* Main.storyboard */,
 				4AE3F171271D5DCE00182DD1 /* Assets.xcassets */,
 				4AE3F173271D5DCE00182DD1 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE3F16D271D5DCB00182DD1 /* ViewController.swift in Sources */,
+				4AE3F17D271D601D00182DD1 /* MyCustomView.swift in Sources */,
 				4AE3F169271D5DCB00182DD1 /* AppDelegate.swift in Sources */,
 				4AE3F16B271D5DCB00182DD1 /* SceneDelegate.swift in Sources */,
 			);

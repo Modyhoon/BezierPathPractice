@@ -12,15 +12,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let path = UIBezierPath()
-        path.lineWidth = 2
-        path.lineJoinStyle = .round
-        path.usesEvenOddFillRule = true
-
-        path.move(to: CGPoint(x: 100, y: 100))
-        path.addLine(to: CGPoint(x: 100, y: 200))
-
-        path.close()
+        let view = MyCustomView(frame: self.view.frame)
+        view.backgroundColor = .clear
+        self.view.addSubview(view)
     }
 
 
