@@ -11,7 +11,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let path = UIBezierPath()
+        path.lineWidth = 2
+        path.lineJoinStyle = .round
+        path.usesEvenOddFillRule = true
+
+        path.move(to: CGPoint(x: 100, y: 100))
+        path.addLine(to: CGPoint(x: 100, y: 200))
+
+        path.close()
     }
 
 
