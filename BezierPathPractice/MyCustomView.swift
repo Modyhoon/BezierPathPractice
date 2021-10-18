@@ -12,24 +12,43 @@ class MyCustomView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
 
-        let path = UIBezierPath()
-        path.lineWidth = 7
-        path.lineCapStyle = .round
-        path.usesEvenOddFillRule = true
+        let argument: [CGFloat] = [10, 20, 70]
 
-        path.move(to: CGPoint(x: 100, y: 100))
-        path.addLine(to: CGPoint(x: 100, y: 200))
 
-        path.addLine(to: CGPoint(x: 200, y: 250))
+        var startAngle: CGFloat = -4 / .pi
+        if argument.reduce(0, { $0 + $1 }) == 100 {
+            argument.enumerated().forEach({
+                let endAngle: CGFloat = startAngle + CGFloat($0.element / 100 * 2) * .pi
+                let path = UIBezierPath()
+                path.addArc(withCenter: CGPoint(x: 150, y: 250), radius: 150, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+                startAngle = endAngle
+                path.addLine(to: CGPoint(x: 150, y: 250))
+                path.close()
+                switch $0.offset {
+                case 0:
+                    UIColor.red.set()
+                case 1:
+                    UIColor.blue.set()
+                case 2:
+                    UIColor.orange.set()
+                default: break
+                }
+                path.fill()
+                path.lineWidth = 10
+                UIColor.white.set()
+                path.stroke()
+            })
+        }
 
-        UIColor.yellow.set()
 
-        path.fill()
 
-        path.close()
-        
-        UIColor.black.set()
-        path.stroke()
+//        path.lineWidth = 5
+//        UIColor.black.set()
+//        path.stroke()
 
+        let centerPath = UIBezierPath()
+        centerPath.addArc(withCenter: CGPoint(x: 150, y: 250), radius: 100, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
+        UIColor.white.set()
+        centerPath.fill()
     }
 }
